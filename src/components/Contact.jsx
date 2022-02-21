@@ -1,13 +1,13 @@
-import contactImage from "../assets/callnow.jpg";
+import contactImage from "../assets/contact.png";
 import ContactCard from "./ContactCard";
 
-const Contact = () => {
+const Contact = ({ setContact }) => {
   return (
     <div className="max-w-7xl mx-auto">
-      <h1 className="text-center text-blue-800 tracking-wider uppercase wow fadeInUp">
+      <h1 className="text-center text-gray-800 tracking-wider uppercase wow fadeInUp">
         Contact
       </h1>
-      <h1 className="text-center text-4xl font-bold text-blue-900 wow fadeInUp">
+      <h1 className="text-center text-4xl font-bold text-green-900 wow fadeInUp">
         Contact Us
       </h1>
       <div className="px-10 md:px-0">
@@ -21,10 +21,10 @@ const Contact = () => {
                 </p>
               </ContactCard>
               <ContactCard icon="far fa-phone" title="Whatsapp Us">
-                <p className="font-light text-sm mt-2 text-blue-700">
+                <p className="font-light text-sm mt-2 text-green-700">
                   +91 700 4749 343
                 </p>
-                <p className="font-light text-sm text-blue-700">
+                <p className="font-light text-sm text-green-700">
                   +91 700 4749 343
                 </p>
               </ContactCard>

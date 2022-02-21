@@ -3,14 +3,14 @@ import service1 from "../assets/values-1.png";
 import service2 from "../assets/values-2.png";
 import service3 from "../assets/values-3.png";
 
-const About = () => {
+const About = ({ setAbout }) => {
   return (
     <>
       <div className="max-w-7xl mx-auto py-16">
-        <h1 className="text-center text-blue-800 tracking-wider uppercase wow fadeInUp">
+        <h1 className="text-center text-gray-800 tracking-wider uppercase wow fadeInUp">
           About Us
         </h1>
-        <h1 className="text-center text-4xl font-bold text-blue-900 wow fadeInUp">
+        <h1 className="text-center text-4xl font-bold text-green-900 wow fadeInUp">
           Key to our success
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -21,7 +21,7 @@ const About = () => {
                 className="transition transform duration-1000 group-hover:scale-95 z-0"
                 alt=""
               />
-              <h1 className="font-bold text-2xl text-blue-900 text-center uppercase">
+              <h1 className="font-bold text-2xl text-green-900 text-center uppercase">
                 Virtuous Work
               </h1>
               <p className="text-gray-700 text-center">
@@ -37,7 +37,7 @@ const About = () => {
                 className="transition transform duration-1000 group-hover:scale-95 z-0"
                 alt=""
               />
-              <h1 className="font-bold text-2xl text-blue-900 text-center uppercase">
+              <h1 className="font-bold text-2xl text-green-900 text-center uppercase">
                 CLIENT'S
               </h1>
               <p className="text-gray-700 text-center">
@@ -53,7 +53,7 @@ const About = () => {
                 className="transition transform duration-1000 group-hover:scale-95 z-0"
                 alt=""
               />
-              <h1 className="font-bold text-2xl text-blue-900 text-center uppercase">
+              <h1 className="font-bold text-2xl text-green-900 text-center uppercase">
                 DEDICATED WORK FORCE
               </h1>
               <p className="text-gray-700 text-center">

@@ -2,14 +2,14 @@ import React from "react";
 import feature from "../assets/features.png";
 import ServiceCard from "./ServiceCard";
 
-const Services = () => {
+const Services = ({ setServices }) => {
   return (
     <>
       <div className="max-w-7xl mx-auto py-16">
-        <h1 className="text-center text-blue-800 tracking-wider uppercase wow fadeInUp">
+        <h1 className="text-center text-gray-800 tracking-wider uppercase wow fadeInUp">
           Services
         </h1>
-        <h1 className="text-center text-4xl font-bold text-blue-900 wow fadeInUp">
+        <h1 className="text-center text-4xl font-bold text-green-900 wow fadeInUp">
           We provide quality service
         </h1>
         <div className="px-4 md:px-0 py-6">

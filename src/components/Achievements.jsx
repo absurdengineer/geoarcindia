@@ -13,7 +13,7 @@ const Achievements = () => {
               <BsEmojiSmile className="text-5xl text-blue-600" />
             </div>
             <div className="w-4/5 px-4">
-              <div className="text-4xl text-blue-900 font-bold">20</div>
+              <div className="text-4xl text-green-900 font-bold">20</div>
               <div className="font-semibold">Happy Clients</div>
             </div>
           </div>
@@ -24,7 +24,7 @@ const Achievements = () => {
               <RiBookReadLine className="text-5xl text-orange-500" />
             </div>
             <div className="w-4/5 px-4">
-              <div className="text-4xl text-blue-900 font-bold">1000</div>
+              <div className="text-4xl text-green-900 font-bold">1000</div>
               <div className="font-semibold">Projects</div>
             </div>
           </div>
@@ -35,7 +35,7 @@ const Achievements = () => {
               <BsHeadset className="text-5xl text-green-500" />
             </div>
             <div className="w-4/5 px-4">
-              <div className="text-4xl text-blue-900 font-bold">8105</div>
+              <div className="text-4xl text-green-900 font-bold">8105</div>
               <div className="font-semibold">Hours Of Support</div>
             </div>
           </div>
@@ -46,7 +46,7 @@ const Achievements = () => {
               <HiOutlineUsers className="text-5xl text-red-500" />
             </div>
             <div className="w-4/5 px-4">
-              <div className="text-4xl text-blue-900 font-bold">5000</div>
+              <div className="text-4xl text-green-900 font-bold">5000</div>
               <div className="font-semibold">Hard Workers</div>
             </div>
           </div>

@@ -1,16 +1,22 @@
-import React, { useEffect } from "react";
-import Landing from "./components/Landing";
-import Navbar from "./components/Navbar";
+import React, { useEffect, useState } from "react";
 import WOW from "wowjs/dist/wow";
 import About from "./components/About";
-import "./App.css";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Landing from "./components/Landing";
+import Contact from "./components/Contact";
+import Services from "./components/Services";
 import WorkFlow from "./components/WorkFlow";
 import Achievements from "./components/Achievements";
-import Services from "./components/Services";
-import Contact from "./components/Contact";
+import "./App.css";
 
 const App = () => {
+  const [landing, setLanding] = useState(null);
+  const [about, setAbout] = useState(null);
+  const [workflow, setWorkflow] = useState(null);
+  const [services, setServices] = useState(null);
+  const [contact, setContact] = useState(null);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       const wow = new WOW.WOW({
@@ -23,12 +29,12 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Landing />
-      <About />
-      <WorkFlow />
+      <Landing setLanding={setLanding} />
+      <About setAbout={setAbout} />
+      <WorkFlow setWorkflow={setWorkflow} />
       <Achievements />
-      <Services />
-      <Contact />
+      <Services setServices={setServices} />
+      <Contact setContact={setContact} />
       <Footer />
     </>
   );

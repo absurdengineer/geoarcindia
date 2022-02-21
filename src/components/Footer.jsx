@@ -5,7 +5,7 @@ import logo from "../assets/geo-icon.png";
 const Footer = () => {
   return (
     <>
-      <footer className="footer bg-white pt-2 border-t-2 border-blue-700">
+      <footer className="footer bg-white pt-2 border-t-2 border-green-700">
         <div
           className="bg-cover bg-no-repeat h-full py-6"
           style={{ background: `url(${footerBg}) ` }}
@@ -27,32 +27,32 @@ const Footer = () => {
                   Useful Links
                 </p>
                 <div className="text-gray-700 mt-4 md:mt-0 mb-2">
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than font-light text-gray-400 font-light text-gray-400     "></i>{" "}
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                    <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
                     Home
                   </p>
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than font-light text-gray-400 font-light text-gray-400     "></i>{" "}
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                    <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
                     About
                   </p>
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than font-light text-gray-400 font-light text-gray-400     "></i>{" "}
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                    <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
                     Services
                   </p>
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than font-light text-gray-400 font-light text-gray-400     "></i>{" "}
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                    <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
                     Careers
                   </p>
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than font-light text-gray-400 font-light text-gray-400     "></i>{" "}
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                    <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
                     Internship
                   </p>
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than font-light text-gray-400 font-light text-gray-400     "></i>{" "}
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                    <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
                     Community
                   </p>
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than font-light text-gray-400 font-light text-gray-400     "></i>{" "}
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                    <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
                     Contact
                   </p>
                 </div>
@@ -62,20 +62,20 @@ const Footer = () => {
                   Our Services
                 </p>
                 <div className="text-gray-700 mt-4 md:mt-0 mb-2">
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than  font-light text-gray-400 "></i>{" "}
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                    <i className="fas fa-greater-than mr-1  font-light text-gray-400 "></i>
                     Invigilation
                   </p>
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than font-light text-gray-400  "></i>{" "}
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                    <i className="fas fa-greater-than mr-1 font-light text-gray-400  "></i>
                     Web Development
                   </p>
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than  font-light text-gray-400  "></i>{" "}
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                    <i className="fas fa-greater-than mr-1  font-light text-gray-400  "></i>
                     Product Management
                   </p>
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than   font-light text-gray-400"></i>{" "}
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                    <i className="fas fa-greater-than mr-1   font-light text-gray-400"></i>
                     Marketing
                   </p>
                 </div>
@@ -92,15 +92,13 @@ const Footer = () => {
                   <p className="text-sm font-bold text-gray-800 mt-5">
                     <i className="fab fa-whatsapp    "></i> Whatsapp :
                   </p>
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
                     <a target="_blank" href="https://wa.me/+917004749343">
-                      {" "}
                       +91 700 4749 343
                     </a>
                   </p>
-                  <p className="text-sm text-blue-800 my-2 cursor-pointer">
+                  <p className="text-sm text-green-800 my-2 cursor-pointer">
                     <a target="_blank" href="https://wa.me/+917004749343">
-                      {" "}
                       +91 700 4749 343
                     </a>
                   </p>

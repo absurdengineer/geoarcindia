@@ -1,8 +1,8 @@
 import React from "react";
-import LandingImage from "../assets/landing.png";
+import LandingImage from "../assets/landing.jpg";
 import IntroImage from "../assets/intro.png";
 
-const Landing = () => {
+const Landing = ({ setLanding }) => {
   return (
     <div
       className="bg-fixed bg-no-repeat bg-cover"
@@ -11,8 +11,8 @@ const Landing = () => {
       <div className="max-w-7xl mx-auto">
         <div className="px-10 md:px-0 py-6">
           <div className="grid grid-cols-2 py-32">
-            <div className="col-span-2 md:col-span-1 py-10">
-              <h1 className="text-gray-800 font-bold text-3xl md:text-5xl wow fadeInUp">
+            <div className="text-gray-200 col-span-2 md:col-span-1 py-10">
+              <h1 className="font-bold text-3xl md:text-5xl wow fadeInUp">
                 Deploy is what we do...
               </h1>
               <p
@@ -31,7 +31,7 @@ const Landing = () => {
                 while improving efficiencies.
               </p>
               <button
-                className=" mt-6 px-8 py-3 text-white bg-blue-600 rounded shadow-xl tracking-wider wow fadeInUp"
+                className=" mt-6 px-8 py-3 text-white bg-green-600 rounded shadow-xl tracking-wider wow fadeInUp"
                 data-wow-delay="0.8s"
               >
                 Connect with us
