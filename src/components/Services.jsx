@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import feature from "../assets/features.png";
 import ServiceCard from "./ServiceCard";
 
-const Services = ({ setServices }) => {
+const Services = ({ setServicesRef }) => {
+  const servicesRef = useRef(null);
+
+  useEffect(() => {
+    setServicesRef(servicesRef);
+  }, []);
+
   return (
     <>
-      <div className="max-w-7xl mx-auto py-16">
+      <div className="max-w-7xl mx-auto pt-16" id="services" ref={servicesRef}>
         <h1 className="text-center text-gray-800 tracking-wider uppercase wow fadeInUp">
           Services
         </h1>
         <h1 className="text-center text-4xl font-bold text-green-900 wow fadeInUp">
-          We provide quality service
+          What Can We Provide ?
         </h1>
         <div className="px-4 md:px-0 py-6">
           <div className="grid grid-cols-1 md:grid-cols-2 py-10">

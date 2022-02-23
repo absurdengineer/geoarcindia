@@ -1,14 +1,21 @@
+import React, { useEffect, useRef } from "react";
 import contactImage from "../assets/contact.png";
 import ContactCard from "./ContactCard";
 
-const Contact = ({ setContact }) => {
+const Contact = ({ setContactRef }) => {
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    setContactRef(contactRef);
+  }, []);
+
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl pt-16 mx-auto" id="contact" ref={contactRef}>
       <h1 className="text-center text-gray-800 tracking-wider uppercase wow fadeInUp">
         Contact
       </h1>
       <h1 className="text-center text-4xl font-bold text-green-900 wow fadeInUp">
-        Contact Us
+        We'd Love To Hear From You
       </h1>
       <div className="px-10 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 pb-16">
@@ -21,15 +28,28 @@ const Contact = ({ setContact }) => {
                 </p>
               </ContactCard>
               <ContactCard icon="far fa-phone" title="Whatsapp Us">
-                <p className="font-light text-sm mt-2 text-green-700">
+                <a
+                  target="_blank"
+                  href="https://wa.me/+917004749343"
+                  className="font-light text-sm mt-2 text-green-700 block"
+                >
                   +91 700 4749 343
-                </p>
-                <p className="font-light text-sm text-green-700">
+                </a>
+                <a
+                  target="_blank"
+                  href="https://wa.me/+917004749343"
+                  className="font-light text-sm text-green-700 block"
+                >
                   +91 700 4749 343
-                </p>
+                </a>
               </ContactCard>
               <ContactCard icon="fas fa-envelope-open-text" title="Email Us">
-                <p className="text-black font-light">info@geoarcindia.in</p>
+                <a
+                  href="mailto:info@geoarcindia.in"
+                  className="text-black font-light"
+                >
+                  info@geoarcindia.in
+                </a>
               </ContactCard>
               <ContactCard icon="fas fa-clock" title="Open Hours">
                 <p className="text-black font-light">Monday - Saturday</p>

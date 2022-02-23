@@ -2,7 +2,17 @@ import React from "react";
 import footerBg from "../assets/footer-bg.png";
 import logo from "../assets/geo-icon.png";
 
-const Footer = () => {
+const Footer = ({
+  aboutRef,
+  homeRef,
+  servicesRef,
+  workflowRef,
+  contactRef,
+}) => {
+  const handleScroll = (ref) => {
+    ref.current.scrollIntoView();
+  };
+
   return (
     <>
       <footer className="footer bg-white pt-2 border-t-2 border-green-700">
@@ -27,31 +37,38 @@ const Footer = () => {
                   Useful Links
                 </p>
                 <div className="text-gray-700 mt-4 md:mt-0 mb-2">
-                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                  <p
+                    onClick={() => handleScroll(homeRef)}
+                    className="text-sm text-green-800 my-2 cursor-pointer hover:text-gray-700"
+                  >
                     <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
                     Home
                   </p>
-                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                  <p
+                    onClick={() => handleScroll(aboutRef)}
+                    className="text-sm text-green-800 my-2 cursor-pointer hover:text-gray-700"
+                  >
                     <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
                     About
                   </p>
-                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                  <p
+                    onClick={() => handleScroll(workflowRef)}
+                    className="text-sm text-green-800 my-2 cursor-pointer hover:text-gray-700"
+                  >
+                    <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
+                    Workflow
+                  </p>
+                  <p
+                    onClick={() => handleScroll(servicesRef)}
+                    className="text-sm text-green-800 my-2 cursor-pointer hover:text-gray-700"
+                  >
                     <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
                     Services
                   </p>
-                  <p className="text-sm text-green-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
-                    Careers
-                  </p>
-                  <p className="text-sm text-green-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
-                    Internship
-                  </p>
-                  <p className="text-sm text-green-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
-                    Community
-                  </p>
-                  <p className="text-sm text-green-800 my-2 cursor-pointer">
+                  <p
+                    onClick={() => handleScroll(contactRef)}
+                    className="text-sm text-green-800 my-2 cursor-pointer hover:text-gray-700"
+                  >
                     <i className="fas fa-greater-than mr-1 font-light text-gray-400 font-light text-gray-400     "></i>
                     Contact
                   </p>
@@ -62,22 +79,12 @@ const Footer = () => {
                   Our Services
                 </p>
                 <div className="text-gray-700 mt-4 md:mt-0 mb-2">
-                  <p className="text-sm text-green-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than mr-1  font-light text-gray-400 "></i>
-                    Invigilation
-                  </p>
-                  <p className="text-sm text-green-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than mr-1 font-light text-gray-400  "></i>
-                    Web Development
-                  </p>
-                  <p className="text-sm text-green-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than mr-1  font-light text-gray-400  "></i>
+                  <p className="text-sm text-green-800 my-2">Invigilation</p>
+                  <p className="text-sm text-green-800 my-2">Web Development</p>
+                  <p className="text-sm text-green-800 my-2">
                     Product Management
                   </p>
-                  <p className="text-sm text-green-800 my-2 cursor-pointer">
-                    <i className="fas fa-greater-than mr-1   font-light text-gray-400"></i>
-                    Marketing
-                  </p>
+                  <p className="text-sm text-green-800 my-2">Marketing</p>
                 </div>
               </div>
               <div className="col-span-2 md:col-span-1 text-center md:text-left wow fadeInUp">

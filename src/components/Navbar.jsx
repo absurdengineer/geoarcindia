@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 import logo from "../assets/geo-icon.png";
 
-const Navbar = () => {
+const Navbar = ({
+  activeTab,
+  aboutRef,
+  homeRef,
+  servicesRef,
+  workflowRef,
+  contactRef,
+}) => {
   const [hideMenu, setHideMenu] = useState(true);
+
+  const handleScroll = (ref) => {
+    ref.current.scrollIntoView();
+  };
 
   return (
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded fixed top-0 right-0 w-full z-50">
@@ -50,86 +61,101 @@ const Navbar = () => {
         <div className="hidden w-full md:block md:w-auto" id="mobile-menu">
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
-              <a
-                href="/app/dashboard"
-                className="text-base block py-2 pr-4 pl-3 text-sm text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                aria-current="page"
+              <p
+                onClick={() => handleScroll(homeRef)}
+                className={`${
+                  activeTab === "home" && "text-green-500"
+                } text-base py-2 pl-2 text-sm text-gray-700 cursor-pointer`}
               >
                 Home
-              </a>
+              </p>
             </li>
             <li>
-              <a
-                href="/app/dashboard"
-                className="text-base block py-2 pr-4 pl-3 text-sm text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              <p
+                onClick={() => handleScroll(aboutRef)}
+                className={`${
+                  activeTab === "about" && "text-green-500"
+                } text-base py-2 pl-2 text-sm text-gray-700 cursor-pointer`}
               >
                 About
-              </a>
+              </p>
             </li>
             <li>
-              <a
-                href="/app/dashboard"
-                className="text-base block py-2 pr-4 pl-3 text-sm text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              <p
+                onClick={() => handleScroll(workflowRef)}
+                className={`${
+                  activeTab === "workflow" && "text-green-500"
+                } text-base py-2 pl-2 text-sm text-gray-700 cursor-pointer`}
+              >
+                Workflow
+              </p>
+            </li>
+            <li>
+              <p
+                onClick={() => handleScroll(servicesRef)}
+                className={`${
+                  activeTab === "services" && "text-green-500"
+                } text-base py-2 pl-2 text-sm text-gray-700 cursor-pointer`}
               >
                 Services
-              </a>
+              </p>
             </li>
             <li>
-              <a
-                href="/app/dashboard"
-                className="text-base block py-2 pr-4 pl-3 text-sm text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Careers
-              </a>
-            </li>
-            <li>
-              <a
-                href="/app/dashboard"
-                className="text-base block py-2 pr-4 pl-3 text-sm text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Internship
-              </a>
-            </li>
-            <li>
-              <a
-                href="/app/dashboard"
-                className="text-base block py-2 pr-4 pl-3 text-sm text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Community
-              </a>
-            </li>
-            <li>
-              <a
-                href="/app/dashboard"
-                className="text-base block py-2 pr-4 pl-3 text-sm text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              <p
+                onClick={() => handleScroll(contactRef)}
+                className={`${
+                  activeTab === "contact" && "text-green-500"
+                } text-base py-2 pl-2 text-sm text-gray-700 cursor-pointer`}
               >
                 Contact
-              </a>
+              </p>
             </li>
           </ul>
         </div>
       </div>
       {!hideMenu && (
-        <div className="mobile-menu transition duration-100 md:hidden fixed w-full border-b-2 mt-2 left-0">
-          <p className="p-3 bg-white text-gray-800 hover:bg-blue-700 hover:text-white">
+        <div
+          className="bg-white mobile-menu transition duration-100 md:hidden fixed w-full border-b-2 mt-2 left-0"
+          onClick={() => setHideMenu(!hideMenu)}
+        >
+          <p
+            onClick={() => handleScroll(homeRef)}
+            className={`${
+              activeTab === "home" && "text-green-500"
+            } text-base block py-2 pl-2 text-sm text-gray-700 cursor-pointer`}
+          >
             Home
           </p>
-          <p className="p-3 bg-white text-gray-800 hover:bg-blue-700 hover:text-white">
+          <p
+            onClick={() => handleScroll(aboutRef)}
+            className={`${
+              activeTab === "about" && "text-green-500"
+            } text-base block py-2 pl-2 text-sm text-gray-700 cursor-pointer`}
+          >
             About
           </p>
-          <p className="p-3 bg-white text-gray-800 hover:bg-blue-700 hover:text-white">
+          <p
+            onClick={() => handleScroll(workflowRef)}
+            className={`${
+              activeTab === "workflow" && "text-green-500"
+            } text-base block py-2 pl-2 text-sm text-gray-700 cursor-pointer`}
+          >
+            Workflow
+          </p>
+          <p
+            onClick={() => handleScroll(servicesRef)}
+            className={`${
+              activeTab === "services" && "text-green-500"
+            } text-base block py-2 pl-2 text-sm text-gray-700 cursor-pointer`}
+          >
             Services
           </p>
-          <p className="p-3 bg-white text-gray-800 hover:bg-blue-700 hover:text-white">
-            Careers
-          </p>
-          <p className="p-3 bg-white text-gray-800 hover:bg-blue-700 hover:text-white">
-            Internship
-          </p>
-          <p className="p-3 bg-white text-gray-800 hover:bg-blue-700 hover:text-white">
-            Community
-          </p>
-          <p className="p-3 bg-white text-gray-800 hover:bg-blue-700 hover:text-white">
+          <p
+            onClick={() => handleScroll(contactRef)}
+            className={`${
+              activeTab === "contact" && "text-green-500"
+            } text-base block py-2 pl-2 text-sm`}
+          >
             Contact
           </p>
         </div>

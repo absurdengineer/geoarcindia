@@ -5,7 +5,7 @@ import { HiOutlineUsers } from "react-icons/hi";
 
 const Achievements = () => {
   return (
-    <div className="max-w-7xl mx-auto pb-16 mt-10 wow fadeInUp">
+    <div className="max-w-7xl mx-auto pt-16 mt-10 wow fadeInUp">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="bg-white rounded-lg shadow-xl border p-8 w-3xl">
           <div className="flex justify-center items-center">

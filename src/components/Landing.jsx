@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import LandingImage from "../assets/landing.jpg";
 import IntroImage from "../assets/intro.png";
 
-const Landing = ({ setLanding }) => {
+const Landing = ({ setHomeRef }) => {
+  const homeRef = useRef(null);
+
+  useEffect(() => {
+    setHomeRef(homeRef);
+  }, []);
+
   return (
     <div
       className="bg-fixed bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${LandingImage})` }}
+      id="home"
+      ref={homeRef}
     >
       <div className="max-w-7xl mx-auto">
         <div className="px-10 md:px-0 py-6">

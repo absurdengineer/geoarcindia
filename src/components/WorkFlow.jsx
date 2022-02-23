@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
-const WorkFlow = ({ setWorkflow }) => {
+const WorkFlow = ({ setWorkflowRef }) => {
+  const workflowRef = useRef(null);
+
+  useEffect(() => {
+    setWorkflowRef(workflowRef);
+  }, []);
+
   return (
     <>
-      <div className="max-w-7xl mx-auto pb-16">
+      <div className="max-w-7xl mx-auto pt-16" id="workflow" ref={workflowRef}>
         <h1 className="text-center text-4xl mb-10 font-bold text-green-900 wow fadeInUp">
-          Our Work Flow
+          How Do We Do ?
         </h1>
         <div className="hidden md:block my-4 p-4 wow fadeInUp">
           <div className="flex items-center">

@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import service1 from "../assets/values-1.png";
 import service2 from "../assets/values-2.png";
 import service3 from "../assets/values-3.png";
 
-const About = ({ setAbout }) => {
+const About = ({ setAboutRef }) => {
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    setAboutRef(aboutRef);
+  }, []);
+
   return (
     <>
-      <div className="max-w-7xl mx-auto py-16">
+      <div className="max-w-7xl mx-auto pt-16" id="about" ref={aboutRef}>
         <h1 className="text-center text-gray-800 tracking-wider uppercase wow fadeInUp">
           About Us
         </h1>
         <h1 className="text-center text-4xl font-bold text-green-900 wow fadeInUp">
-          Key to our success
+          Who We Are?
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="group bg-white rounded border shadow-xl p-10 max-w-lg hover:shadow-2xl my-8 wow fadeInUp">
