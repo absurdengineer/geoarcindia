@@ -108,7 +108,7 @@ const WorkFlow = ({ setWorkflowRef }) => {
               <div className="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium uppercase text-green-900">
                 <h5 className="font-bold">STEP 4</h5>
                 <p className="mt-1 text-gray-800">
-                  TRAINING HIREIUM'S SAILORS AS PER THE TASK
+                  TRAINING AS PER THE TASK
                 </p>
               </div>
             </div>
@@ -207,7 +207,7 @@ const WorkFlow = ({ setWorkflowRef }) => {
                 <div className="p-4">
                   <h6 className="uppercase">Step - 4</h6>
                   <h6 className="text-gray-500">
-                    TRAINING HIREIUM'S SAILORS AS PER THE TASK
+                    TRAINING AS PER THE TASK
                   </h6>
                 </div>
               </div>
