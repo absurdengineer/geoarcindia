@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import LandingImage from "../assets/landing.jpg";
 import IntroImage from "../assets/intro.png";
 
-const Landing = ({ setHomeRef }) => {
+const Landing = ({ setHomeRef, contactRef }) => {
   const homeRef = useRef(null);
 
   useEffect(() => {
@@ -21,28 +21,32 @@ const Landing = ({ setHomeRef }) => {
           <div className="grid grid-cols-2 py-32">
             <div className="text-gray-200 col-span-2 md:col-span-1 py-10">
               <h1 className="font-bold text-3xl md:text-5xl wow fadeInUp">
-                Deploy is what we do...
+                Geo imagination, Diffusion in Motion
               </h1>
               <p
-                className="text-xl md:text-2xl text-center md:text-left mt-8 wow fadeInUp"
+                className="text-xl md:text-xl text-center md:text-left mt-8 wow fadeInUp"
                 data-wow-delay="0.4s"
               >
-                We support companies to refocus their resources on their core
-                business.
+                gi Perspective can advise on the most appropriate sources and
+                formats of GIS mapping data for a particular project.
               </p>
               <p
-                className="text-xl md:text-2xl text-center md:text-left my-2 wow fadeInUp"
+                className="text-xl md:text-xl text-center md:text-left my-2 wow fadeInUp"
                 data-wow-delay="0.4s"
               >
-                We benefit companies to re-examine their benefit plans, Which
-                makes them more efficient and Which saves there time and money
-                while improving efficiencies.
+                The data required for use in a typical GIS mapping data exercise
+                may include; base mapping at different scales, aerial imagery,
+                overlay data such as postcode boundaries or census data or
+                client specific data relevant to the project.
               </p>
               <button
                 className=" mt-6 px-8 py-3 text-white bg-green-600 rounded shadow-xl tracking-wider wow fadeInUp"
                 data-wow-delay="0.8s"
+                onClick={() => {
+                  contactRef.current.scrollIntoView();
+                }}
               >
-                Connect with us
+                Write Us
                 <i className="fas fa-arrow-right ml-2"></i>
               </button>
             </div>

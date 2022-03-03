@@ -31,6 +31,20 @@ const Footer = ({
                   makes them more efficient and Which saves there time and money
                   while improving efficiencies.
                 </p>
+                <p className="pr-6 mt-3">
+                  <a href="/" target="__blank">
+                    <i className="fa-brands fa-github text-xl mr-2"></i>
+                  </a>
+                  <a href="/" target="__blank">
+                    <i className="fa-brands fa-facebook text-xl mr-2"></i>
+                  </a>
+                  <a href="/" target="__blank">
+                    <i className="fa-brands fa-instagram text-xl mr-2"></i>
+                  </a>
+                  <a href="/" target="__blank">
+                    <i className="fa-brands fa-twitter text-xl mr-2"></i>
+                  </a>
+                </p>
               </div>
               <div className="px-8 md:px-0 wow fadeInUp">
                 <p className="font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-2">
@@ -116,15 +130,18 @@ const Footer = ({
         </div>
         <div className="container mx-auto">
           <div className="border-t-2 border-gray-300 flex flex-col items-center wow fadeInUp">
-            <div className="sm:w-2/3 text-center py-6">
+            <div className="sm:w-2/3 text-center py-2">
+              <p>
+                Copyright <i class="fas fa-copyright    "></i> 2022
+              </p>
+              <hr width="50%" className="mx-auto my-3" />
               <a
                 href="https://www.webformulator.com/"
                 target="_blank"
                 className="text-sm text-black mb-2 credits text-xl"
               >
                 <i className="fas fa-code text-yellow-300   "></i> Developed
-                with
-                <i className="fas fa-heart text-red-600   "></i> by Md. Dilshad
+                with <i class="fas fa-heart text-red-500   "></i> by Md. Dilshad
                 Alam
               </a>
             </div>
