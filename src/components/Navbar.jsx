@@ -8,6 +8,7 @@ const Navbar = ({
   servicesRef,
   workflowRef,
   contactRef,
+  testimonialsRef,
 }) => {
   const [hideMenu, setHideMenu] = useState(true);
 
@@ -102,6 +103,16 @@ const Navbar = ({
             </li>
             <li>
               <p
+                onClick={() => handleScroll(testimonialsRef)}
+                className={`${
+                  activeTab === "testimonials" && "text-green-500"
+                } text-base py-2 pl-2 text-sm text-gray-700 cursor-pointer`}
+              >
+                Testimonials
+              </p>
+            </li>
+            <li>
+              <p
                 onClick={() => handleScroll(contactRef)}
                 className={`${
                   activeTab === "contact" && "text-green-500"
@@ -109,6 +120,11 @@ const Navbar = ({
               >
                 Contact
               </p>
+            </li>
+            <li>
+              <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-base py-2 pl-2 text-sm text-gray-700 cursor-pointer">
+                Member Login
+              </button>
             </li>
           </ul>
         </div>
@@ -149,6 +165,14 @@ const Navbar = ({
             } text-base block py-2 pl-2 text-sm text-gray-700 cursor-pointer`}
           >
             Services
+          </p>
+          <p
+            onClick={() => handleScroll(testimonialsRef)}
+            className={`${
+              activeTab === "testimonials" && "text-green-500"
+            } text-base block py-2 pl-2 text-sm text-gray-700 cursor-pointer`}
+          >
+            Testimonials
           </p>
           <p
             onClick={() => handleScroll(contactRef)}

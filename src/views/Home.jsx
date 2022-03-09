@@ -9,6 +9,7 @@ import Services from "../components/Services";
 import WorkFlow from "../components/WorkFlow";
 import Achievements from "../components/Achievements";
 import BackToTop from "../components/BackToTop";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   const [aboutRef, setAboutRef] = useState(null);
@@ -16,6 +17,7 @@ const Home = () => {
   const [servicesRef, setServicesRef] = useState(null);
   const [workflowRef, setWorkflowRef] = useState(null);
   const [contactRef, setContactRef] = useState(null);
+  const [testimonialsRef, setTestimonialsRef] = useState(null);
   const [activeTab, setActiveTab] = useState("home");
   const [showBack, setShowBack] = useState(false);
 
@@ -23,15 +25,18 @@ const Home = () => {
     const scrollPos = document.documentElement.scrollTop + 10;
     const home = document.getElementById("home").offsetTop;
     const about = document.getElementById("about").offsetTop;
-    const services = document.getElementById("services").offsetTop;
     const workflow = document.getElementById("workflow").offsetTop;
+    const services = document.getElementById("services").offsetTop;
+    const testimonials = document.getElementById("testimonials").offsetTop;
     const contact = document.getElementById("contact").offsetTop;
     if (scrollPos >= home && scrollPos < about) setActiveTab("home");
     else if (scrollPos >= about && scrollPos < workflow) setActiveTab("about");
     else if (scrollPos >= workflow && scrollPos < services)
       setActiveTab("workflow");
-    else if (scrollPos >= services && scrollPos < contact)
+    else if (scrollPos >= services && scrollPos < testimonials)
       setActiveTab("services");
+    else if (scrollPos >= testimonials && scrollPos < contact)
+      setActiveTab("testimonials");
     else setActiveTab("contact");
     if (scrollPos >= about) setShowBack(true);
     else setShowBack(false);
@@ -58,6 +63,7 @@ const Home = () => {
         servicesRef={servicesRef}
         workflowRef={workflowRef}
         contactRef={contactRef}
+        testimonialsRef={testimonialsRef}
         activeTab={activeTab}
       />
       <Landing setHomeRef={setHomeRef} contactRef={contactRef} />
@@ -65,11 +71,13 @@ const Home = () => {
       <WorkFlow setWorkflowRef={setWorkflowRef} />
       <Achievements />
       <Services setServicesRef={setServicesRef} />
+      <Testimonials setTestimonialsRef={setTestimonialsRef} />
       <Contact setContactRef={setContactRef} />
       <Footer
         aboutRef={aboutRef}
         homeRef={homeRef}
         servicesRef={servicesRef}
+        testimonialsRef={testimonialsRef}
         workflowRef={workflowRef}
         contactRef={contactRef}
       />

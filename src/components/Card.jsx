@@ -4,7 +4,7 @@ const Card = ({ image, heading, description, reverse = false }) => {
   return (
     <>
       <div className="rounded overflow-hidden shadow-lg my-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 px-2">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           {!reverse && (
             <div
               className="relative h-100 w-full flex items-end justify-start text-left bg-cover bg-center"
@@ -34,35 +34,9 @@ const Card = ({ image, heading, description, reverse = false }) => {
           )}
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">{heading}</div>
-            <p className="text-gray-700 text-base">
-              {/* {description} */}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              amet obcaecati quod cupiditate qui earum consequatur sapiente iure
-              accusantium, ab atque impedit ipsum nostrum eaque eius!
-              Praesentium tempora quos beatae molestias aliquam voluptas omnis
-              veniam sed atque cum repudiandae dolorem deserunt inventore
-              laborum iste rerum maxime dicta numquam, facilis enim consequatur
-              dignissimos nulla. Odio corporis temporibus accusantium ipsam,
-              tenetur tempore non molestiae voluptatibus, a enim earum odit aut
-              soluta commodi nostrum quod corrupti perferendis fugit explicabo
-              exercitationem voluptatem suscipit praesentium laudantium illum?
-              Voluptate eligendi voluptas laudantium commodi minima nam non
-              dicta, ipsum eos sed officia a sequi tempore esse, rem obcaecati.
-              Aperiam delectus quae, repellat dignissimos quam similique, facere
-              ut aut inventore suscipit aspernatur quo voluptates doloremque
-              fugit. Distinctio, ducimus?
+            <p className="text-gray-700 text-base text-justify">
+              {description}
             </p>
-            <div className="px-6 pt-4 pb-2">
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
           </div>
           {reverse && (
             <div

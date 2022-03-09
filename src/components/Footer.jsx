@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import footerBg from "../assets/footer-bg.png";
 import logo from "../assets/geo-icon.png";
 
@@ -9,6 +10,8 @@ const Footer = ({
   workflowRef,
   contactRef,
 }) => {
+  const navigate = useNavigate();
+
   const handleScroll = (ref) => {
     ref.current.scrollIntoView();
   };
@@ -93,12 +96,42 @@ const Footer = ({
                   Our Services
                 </p>
                 <div className="text-gray-700 mt-4 md:mt-0 mb-2">
-                  <p className="text-sm text-green-800 my-2">Invigilation</p>
-                  <p className="text-sm text-green-800 my-2">Web Development</p>
-                  <p className="text-sm text-green-800 my-2">
-                    Product Management
+                  <p
+                    onClick={() => navigate("/manpower-services")}
+                    className="cursor-pointer text-sm text-green-800 my-2"
+                  >
+                    Manpower Services
                   </p>
-                  <p className="text-sm text-green-800 my-2">Marketing</p>
+                  <p
+                    onClick={() => navigate("/facility-management")}
+                    className="cursor-pointer text-sm text-green-800 my-2"
+                  >
+                    Facility Management
+                  </p>
+                  <p
+                    onClick={() => navigate("/surveying-and-mapping")}
+                    className="cursor-pointer text-sm text-green-800 my-2"
+                  >
+                    Surveying and Mapping
+                  </p>
+                  <p
+                    onClick={() => navigate("/online-invigilation-services")}
+                    className="cursor-pointer text-sm text-green-800 my-2"
+                  >
+                    Online Invigilation Services
+                  </p>
+                  <p
+                    onClick={() => navigate("/gis")}
+                    className="cursor-pointer text-sm text-green-800 my-2"
+                  >
+                    GIS
+                  </p>
+                  <p
+                    onClick={() => navigate("/customize-software")}
+                    className="cursor-pointer text-sm text-green-800 my-2"
+                  >
+                    Customize Software
+                  </p>
                 </div>
               </div>
               <div className="col-span-2 md:col-span-1 text-center md:text-left wow fadeInUp">

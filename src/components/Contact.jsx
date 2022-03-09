@@ -27,7 +27,7 @@ const Contact = ({ setContactRef }) => {
                   Jharkhand, JH 810001, India
                 </p>
               </ContactCard>
-              <ContactCard icon="far fa-phone" title="Whatsapp Us">
+              <ContactCard icon="fab fa-whatsapp" title="Whatsapp Us">
                 <a
                   target="_blank"
                   href="https://wa.me/+917004749343"
