@@ -21,13 +21,13 @@ const Landing = ({ setHomeRef, contactRef }) => {
           <div className="grid grid-cols-2 py-32">
             <div className="text-gray-200 col-span-2 md:col-span-1 py-10">
               <h1 className="font-bold text-3xl md:text-5xl wow fadeInUp">
-                Geo imagination, Diffusion in Motion
+                "Geo Imagination, Diffusion in Motion"
               </h1>
               <p
                 className="text-xl md:text-xl text-center md:text-left mt-8 wow fadeInUp"
                 data-wow-delay="0.4s"
               >
-                gi Perspective can advise on the most appropriate sources and
+                GAI Perspective can advise on the most appropriate sources and
                 formats of GIS mapping data for a particular project.
               </p>
               <p
