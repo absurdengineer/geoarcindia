@@ -3,6 +3,7 @@ import { BsEmojiSmile, BsHeadset } from "react-icons/bs";
 import { RiBookReadLine } from "react-icons/ri";
 import { HiOutlineUsers } from "react-icons/hi";
 
+
 const Achievements = () => {
   return (
     <div className="max-w-7xl mx-auto pt-16 mt-10 wow fadeInUp">

@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import image1 from "../assets/manpower-services.jpg";
+import image1 from "../assets/survey.jpg";
 
 const SurveyingAndMappingContent = () => {
   return (

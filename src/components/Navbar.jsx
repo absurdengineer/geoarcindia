@@ -17,10 +17,10 @@ const Navbar = ({
   };
 
   return (
-    <nav className="bg-gray-100 border-gray-200 px-2 sm:px-4 py-2 rounded fixed top-0 right-0 w-full z-50">
+    <nav className="bg-gray-100 border-gray-200 px-2 sm:px-4 py-2 rounded fixed top-0 right-0 w-full z-20">
       <div className="bg-gray-100 max-w-7xl flex flex-wrap justify-between items-center mx-auto">
         <a href="/" className="flex">
-          <img src={logo} className="h-12" alt="logo" />
+          <img src={logo} className="h-14" alt="logo" />
         </a>
         <button
           data-collapse-toggle="mobile-menu"

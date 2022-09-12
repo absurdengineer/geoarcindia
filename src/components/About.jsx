@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import service1 from "../assets/values-1.png";
 import service2 from "../assets/values-2.png";
 import service3 from "../assets/values-3.png";
+import ContactCard from "../assets/Portal/Total_Station.jpg"
 
 const About = ({ setAboutRef }) => {
   const aboutRef = useRef(null);
@@ -22,7 +23,7 @@ const About = ({ setAboutRef }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 my-8">
           <div className="flex flex-row items-end place-content-end px-5">
             <img
-              src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1024&h=1280&q=80"
+              src={ContactCard}
               className="object-fill h-56 w-80 rounded"
             />
           </div>

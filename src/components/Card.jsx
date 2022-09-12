@@ -12,7 +12,7 @@ const Card = ({ image, heading, description, reverse = false }) => {
                 backgroundImage: `linear-gradient(
                     to bottom left,
                     rgb(0, 0, 0, 0.4),
-                    rgba(0, 136, 41, 0.80)
+                    rgba(0, 0, 0, 0)
                   ),url(${image})`,
               }}
             >
